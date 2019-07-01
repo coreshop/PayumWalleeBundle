@@ -1,0 +1,28 @@
+services:
+
+    #
+    # Form Types
+    #
+
+    CoreShop\Payum\WalleeBundle\Form\Payment\WalleeType:
+        tags:
+            - { name: coreshop.gateway_configuration_type, type: wallee }
+            - { name: form.type }
+
+    #
+    # Payum Factories
+    #
+
+    payum.wallee_gateway_factory:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments: [WVision\Payum\Wallee\WalleeGatewayFactory]
+        tags:
+            - {name: payum.gateway_factory_builder, factory: wallee }
+
+    #
+    # Payum Actions
+    #
+    CoreShop\Payum\WalleeBundle\Action\PrepareTransactionAction:
+        public: true
+        tags:
+            - { name: payum.action, factory: wallee, alias: coreshop.wallee.prepare_transaction }

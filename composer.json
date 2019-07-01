@@ -1,0 +1,40 @@
+{
+  "name": "coreshop/payum-wallee-bundle",
+  "type": "pimcore-bundle",
+  "description": "CoreShop - Wallee Checkout Bundle",
+  "keywords": [
+    "coreshop",
+    "pimcore",
+    "ecommerce",
+    "wallee"
+  ],
+  "homepage": "http://www.coreshop.org",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Dominik Pfaffenbauer",
+      "email": "dominik@pfaffenbauer.at",
+      "homepage": "https://www.pfaffenbauer.at/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "coreshop/payum-bundle": "^2.0",
+    "w-vision/payum-wallee": "~1.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CoreShop\\Payum\\WalleeBundle\\": "src/CoreShop/Payum/WalleeBundle"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    },
+    "pimcore": {
+      "bundles": [
+        "CoreShop\\Payum\\WalleeBundle\\WalleeBundle"
+      ]
+    }
+  }
+}
