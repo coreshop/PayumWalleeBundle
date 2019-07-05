@@ -1,4 +1,4 @@
 core_shop_payment:
     pimcore_admin:
         js:
-            wallee: /bundles/postfinancecheckout/pimcore/js/wallee.js
+            wallee: /bundles/wallee/pimcore/js/wallee.js
