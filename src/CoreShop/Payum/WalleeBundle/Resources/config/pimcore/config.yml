@@ -2,3 +2,4 @@ core_shop_payment:
     pimcore_admin:
         js:
             wallee: /bundles/wallee/pimcore/js/wallee.js
+
